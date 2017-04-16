@@ -19,10 +19,23 @@ void Util::drawCross(int row, int col)
         col*fieldW+fieldW, row*fieldH+fieldH);
 
     // top right to bottom left
+
+
     SDL_RenderDrawLine(App::getRenderer(),
         col*fieldW, row*fieldH+fieldH,
         col*fieldW+fieldW, row*fieldH);
+
+    SDL_RenderDrawLine(App::getRenderer(),
+        col*fieldW, row*fieldH,
+        col*fieldW+fieldW, row*fieldH+fieldH);
+
+
+
+
+
 }
+
+
 
 // render circle on board field (boardX, boardY)
 void Util::drawCircle(int row, int col)
