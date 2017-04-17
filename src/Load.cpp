@@ -1,16 +1,30 @@
-// main.cpp
-// app entry point.
-//
-// Author: yat0 - https://github.com/yat0
-
 #include "App.h"
 #include <cstdio>
 #include "Load.h"
 
-//const int SCREEN_WIDTH = 640;
-//const int SCREEN_HEIGHT = 480;
+const int SCREEN_WIDTH = 640;
+const int SCREEN_HEIGHT = 480;
 
- /*void main1::disp_PNG()
+Load::~Load()
+{
+  if(pngSurf == NULL)
+  {
+      printf("Your PNG file could not be loaded!");
+  }
+
+
+  if(pngTex == NULL)
+  printf("Image texure cannot be displayed!");
+
+
+
+}
+
+
+
+
+
+void Load::disp_PNG()
    {
 
 
@@ -30,54 +44,7 @@
     SDL_RenderClear(App::getRenderer());
     SDL_RenderCopyEx(App::getRenderer(),texTarget, NULL, NULL, 0, NULL, SDL_FLIP_VERTICAL);
     SDL_RenderPresent(App::getRenderer());
-   } */
+   }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-int main(int argc, char *args[])
-{
-    //IMG_INIT(IMG_INIT_PNG);
-
-    App app1;
-
-    if(!app1.init())
-    {
-        printf("Error initializing... bye!\n");
-        return 0;
-    }
-    //app1.start();
-    //app1.run();
-
-
-    //SDL_Surface * image = IMG_Load("sprite.png");
-    //SDL_Texture * texture = SDL_CreateTextureFromSurface(getRenderer,image);
-
-   Load load;
-
-    /*if(!load.disp_PNG())
-    {
-        printf("Error displaying PNG!")
-    } */
-
-    load.disp_PNG();
-
-    app1.run();
-
-
-
-
-    return 0;
-}
 

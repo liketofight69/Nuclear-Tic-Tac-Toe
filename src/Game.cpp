@@ -8,6 +8,7 @@
 #include <SDL.h>
 #include <ctime>
 #include <cstdlib>
+#include "Load.h"
 
 Game::Game()
 {
@@ -79,6 +80,7 @@ void Game::checkWin()
 {
     if(board.hasWinner() || board.isDraw())
         state = STATE_STOPPED; // so the game loop knows the end of the current game
+    //main1::disp_PNG();
 }
 
 void Game::restartGame()
